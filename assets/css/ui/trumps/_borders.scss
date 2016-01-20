@@ -1,0 +1,58 @@
+@mixin border-me($color) {
+
+    border-top: solid 1px $color;
+    border-bottom: solid 1px $color;
+    position: relative;
+    padding-top: $spacing-unit;
+    padding-bottom: halve($spacing-unit);
+    margin-bottom: $spacing-unit;
+
+    &:after {
+        position: absolute;
+        content: "";
+        bottom: -11px;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $color;
+    }
+}
+
+@mixin circle-border($color, $size, $padding) {
+
+    width: $size;
+    height: $size;
+    padding: $padding;
+    border: solid 2px $color;
+    border-radius: 500px;
+
+}
+
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+.border-me {
+    @include border-me($highlight);
+}
+
+    .border-me--white {
+        @include border-me(white);
+    }
+
+.circle-border {
+    @include circle-border($highlight, 290px, 8px);
+    margin: 0 auto;
+
+    @include bp(full-nav) {
+        float: right;
+    }
+}
+
+    .circle-border--black {
+        @include circle-border(black, 290px, 8px);
+        margin: 0 auto;
+
+        @include bp(full-nav) {
+            float: right;
+        }
+    }

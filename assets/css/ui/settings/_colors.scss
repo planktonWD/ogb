@@ -1,0 +1,70 @@
+///
+///
+/// please put any new variables into the swatch
+/// collection at bottom of this file and declare in /documentation/settings/colors.html
+///
+///
+
+// MESSAGES
+
+$success-light: #91c53a;
+$success-dark: #60AB1B;
+
+$error-light: #D22525;
+$error-dark: #BD1111;
+
+$warning-light: #FEAE00;
+$warning-dark: #FD8B00;
+
+$info-light: #0096D8;
+$info-dark: #0066C6;
+
+$light-grey: #7A7A7A;
+
+$off-white: #f7f8f8;
+
+// THEME COLORS
+
+$brown: #A08F57;
+
+$base-text-color:  white;
+$base-background-color:	black;
+
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+
+
+// USEFUL VARIABLES
+
+$highlight: $brown;
+
+$base-color: $base-text-color;
+
+
+
+// FORM ELEMENTS
+
+$placeholder: #aaa;
+
+
+$colors: (
+	'success-dark'  : $success-dark,
+	'success-light' : $success-light,
+	'error-light' : $error-light,
+
+	'error-dark' : $error-dark,
+
+	'warning-light' : $warning-light,
+	'warning-dark' : $warning-dark,
+
+	'info-light' : $info-light,
+	'info-dark' : $info-dark,
+
+	'highlight' : $highlight,
+
+	'base-color': $base-color,
+
+
+);

@@ -1,0 +1,126 @@
+@include bp(full-nav) {
+
+   .nav {
+        /* set these to override the mobile nav */
+        right: 0 !important;
+        //margin-right:-550px;
+        left: auto;
+        bottom: auto;
+        margin-bottom: 0 !important;
+        top: 261px;
+        position: absolute;
+        width: 100%;
+        @include vendor(transform, none !important);
+        @include vendor(translate, none !important);
+        padding: 0;
+        background: none;
+        text-align: right;
+        overflow: visible;
+        height: auto;
+        @include font-size(12px);
+        z-index: 99;
+        pointer-events: none;
+
+
+
+        ul {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+
+
+
+        li {
+            display: inline-block;
+            position: relative;
+            width: auto;
+            margin-right: double($spacing-unit);
+            @include vendor(transition, 0.3s);
+            pointer-events: visible;
+
+
+            a {
+                padding: 0;
+                pointer-events: visible;
+
+                @include attention {
+                    color: $highlight;
+
+                }
+            }
+
+
+        }
+
+        .menu-item-has-children {
+
+            position: relative;
+
+            > a {
+                display: inline-block !important;
+
+
+            }
+
+            &:hover {
+                padding-bottom: 1em;
+
+                ul {
+                    display: block;
+
+                }
+            }
+
+            ul {
+                display: none;
+                position: absolute;
+                top: 1.9em;
+                left: -20px;
+                width: 170px;
+                background: rgba(0,0,0,0.7);
+
+                li {
+                    float: left;
+                    width: 100%;
+                    margin: 0;
+                    text-align: left;
+
+                    a {
+                        padding: 0.5em 20px;
+                    }
+                }
+            }
+
+
+
+        }
+
+
+
+    }
+
+
+}
+
+
+@include bp(small-desk) {
+
+   .nav {
+
+       top: 179px;
+
+       li {
+           margin-right: 59px;
+
+           &:nth-child(3) {
+           margin-right: 310px;
+            }
+
+            &:nth-child(1) {
+            margin-left: 108px;
+             }
+        }
+   }
+}

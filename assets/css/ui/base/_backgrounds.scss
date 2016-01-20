@@ -1,0 +1,55 @@
+.bg-blue-wallpaper {
+    background: url(../../img/blue-wallpaper.jpg);
+color: $highlight;
+    p {
+        color: black;
+    }
+
+}
+
+.bg-peach-wallpaper {
+    background: url(../../img/peach-wallpaper.jpg);
+    color: $highlight;
+
+    p {
+        color: black;
+    }
+
+}
+
+.bg-trans {
+    background: black;
+    background: rgba(0,0,0,0.7);
+
+}
+
+.bg-highlight {
+    background: $highlight;
+
+
+}
+
+.bg-blue-wallpaper, .bg-peach-wallpaper, .bg-trans, .bg-highlight {
+    padding: 67px $spacing-unit;
+
+    @include bp(full-nav) {
+        padding: 67px;
+    }
+}
+
+
+.parallax {
+    background-attachment:fixed;
+    padding: triple($spacing-unit) 0;
+
+    @include bp(full-nav) {
+        padding: 200px 0
+    }
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

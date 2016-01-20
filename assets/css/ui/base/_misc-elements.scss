@@ -1,0 +1,51 @@
+$mini-hr: true;
+$centered-dot-hr: true;
+
+hr {
+	@extend %margin-bottom;
+	border: none;
+	border-bottom: solid 1px white;
+	clear: both;
+
+	&.highlight {
+		border-bottom: solid 1px $highlight;
+	}
+}
+
+@if($mini-hr == true) {
+.mini-hr {
+	width: 28px;
+}
+}
+
+@if($centered-dot-hr == true) {
+.centered-dot-hr {
+	position: relative;
+	border-bottom: solid 2px $highlight;
+
+	&:before, &:after {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		content: "";
+	}
+
+	&:before {
+
+		background: black;
+		width: 30px;
+		height: 40px;
+		margin-left: -15px;
+	}
+
+	&:after {
+
+		background: $highlight;
+		width: 4px;
+		height: 4px;
+		margin-left: -2px;
+		border-radius: 40px;
+		top: -1px;
+	}
+}
+}

@@ -1,0 +1,13 @@
+$header-background: black;
+$header-color: white;
+
+$header-padding-top: 40px;
+
+
+.site-header {
+	background: $header-background;
+	float: left;
+	width: 100%;
+	padding-top: $header-padding-top;
+	color: $header-color;
+}

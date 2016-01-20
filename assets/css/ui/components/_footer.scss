@@ -1,0 +1,77 @@
+.footer {
+
+	padding: double($spacing-unit) $spacing-unit;
+	text-align: center;
+	position: relative;
+	color: $highlight;
+
+	hr {
+		margin: $spacing-unit auto $spacing-unit;
+		max-width: 540px;
+	}
+
+}
+
+
+.facebook-link {
+	margin: 0 auto $spacing-unit;
+	width: 25px;
+	height: 25px;
+	position: relative;
+
+	&:after {
+		position: absolute;
+		top: -9px;
+		left: -2px;
+		background: $highlight;
+		content: "";
+		border-radius: 100px;
+		width: 25px;
+		height: 25px;
+	}
+}
+
+.facebook-svg {
+	width: 20px;
+	height: 20px;
+	margin: 0 auto;
+	fill: black;
+	position: relative;
+	z-index: 99;
+
+}
+
+
+
+	.footer--highlight {
+		background: $highlight;
+		color: white;
+
+		.facebook-link {
+			&:after {
+
+				background: white;
+
+			}
+		}
+
+		.facebook-svg {
+			fill: $highlight;
+		}
+
+		hr {
+			border-bottom: solid 2px white;
+
+			&:before {
+
+				background: $highlight;
+
+			}
+
+			&:after {
+
+				background: white;
+
+			}
+		}
+	}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="{{ page.title }}">
+
+{% include head/styleguide-head.html %}
+  <body>
+
+      <div class="site-wrap clearfix">
+
+        <div class="wrapper u-pt">
+
+            <a href="/" class="button">Home</a>
+
+            {% assign inuitsections = site.pages | sort:"weight"  %}
+
+            {% for subpage in inuitsections | sort:"weight" %}
+
+                {% if subpage.hierarchy == 'parent' %}
+
+                <a href="{{ subpage.url }}" class="button">{{ subpage.title }}</a>
+
+                {% endif %}
+
+            {% endfor %}
+
+            <hr />
+
+            {% for parentpage in site.pages %}
+
+                {% if parentpage.title == page.section %}
+
+                <h3 class="alignleft">{{ page.title }}</h3><a href="{{ parentpage.url }}" class="button alignleft">back to {{ parentpage.title }}</a>
+
+                {% endif %}
+
+            {% endfor %}
+
+            {% if page.hierarchy == 'parent' %}
+
+            <h3 class="alignleft">{{ page.title }}</h3>
+
+            {% endif %}
+
+
+            {% if page.hierarchy == 'child' %}
+
+            <p class="alignright">
+                <strong>HTML</strong> - <span class="subtitle">documentation/{{ page.section }}/{{ page.title }}.html</span><br>
+                <strong>SASS</strong> - <span class="subtitle">ui/{{ page.section }}/{{ page.title }}.scss</span>
+            </p>
+
+            {% endif %}
+
+
+            <hr>
+
+            {% for subpage in site.pages %}
+
+                {% if subpage.section == page.title %}
+
+                <a href="{{ subpage.url }}" class="button">{{ subpage.title }}</a>
+
+                {% endif %}
+
+            {% endfor %}
+
+
+			{{ content }}
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
