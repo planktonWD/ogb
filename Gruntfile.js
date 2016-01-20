@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 command: 'jekyll build'
             },
             jekyllServe: {
-                command: "jekyll serve --baseurl ''"
+                command: "jekyll serve --baseurl 'http://planktonwd.github.io/ogb'"
                 //command: 'jekyll serve'
             }
         },
