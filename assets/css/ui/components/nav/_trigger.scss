@@ -154,10 +154,11 @@ label[for="nav-trigger"] {
 
 }
 
-nav {
+.nav {
     opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
 
-.nav-trigger:checked ~ nav {
+.nav-trigger:checked ~ .nav {
   opacity: 1;
 }
