@@ -13,10 +13,10 @@ module.exports = function (grunt) {
         // shell commands for use in Grunt tasks
         shell: {
             jekyllBuild: {
-                command: 'jekyll build'
+                command: "jekyll build"
             },
             jekyllServe: {
-                command: "jekyll serve --baseurl 'http://planktonwd.github.io/ogb'"
+                command: "jekyll serve"
                 //command: 'jekyll serve'
             }
         },
