@@ -49,12 +49,12 @@
     }
 }
 
-    .circle-border--black {
-        @include circle-border(black, 200px, 8px);
+    .circle-border--white {
+        @include circle-border(white, 200px, 8px);
         margin: 0 auto;
 
         @include bp(full-nav) {
-            @include circle-border($highlight, 290px, 8px);
+            @include circle-border(white, 290px, 8px);
             float: right;
         }
     }

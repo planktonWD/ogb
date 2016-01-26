@@ -37,19 +37,20 @@
     }
 
     &.active > a {
-        color: $highlight;
+        color: white;
     }
 
     a {
       /* non-critical appearance styles */
       display: inline-block;
       padding: $spacing-unit/4 $spacing-unit;
-      color: white;
+      color: $highlight;
       text-decoration: none;
       transition: all 0.3s;
 
         &:hover {
-          color: $highlight;
+          color: white;
+          opacity: 1;
         }
     }
   }
