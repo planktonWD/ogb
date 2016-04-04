@@ -40,7 +40,9 @@ color: $highlight;
 
 .parallax {
     background-attachment:fixed;
-    padding: triple($spacing-unit) 0;
+    //padding: triple($spacing-unit) 0;
+    @include vendor(background-size, cover);
+    background-position: top center;
 
     @include bp(full-nav) {
         padding: 200px 0
