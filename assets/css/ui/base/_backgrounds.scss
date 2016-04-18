@@ -19,7 +19,7 @@ color: $highlight;
 
 .bg-trans {
     background: black;
-    background: rgba(0,0,0,0.7);
+    //background: rgba(0,0,0,0.7);
 
 }
 
@@ -45,7 +45,7 @@ color: $highlight;
     background-position: top center;
 
     @include bp(full-nav) {
-        padding: 200px 0
+        padding-top: 400px;
     }
 
 }
